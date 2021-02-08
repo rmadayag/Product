@@ -1,0 +1,466 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
+
+body
+{
+  position: relative;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  background-color: black;
+  min-width: 360px;
+}
+
+#welcome
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  animation-name: fade;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+
+@keyframes fade{
+  0%
+  {
+    background-color: white;
+    opacity: 1;
+  }
+  60%
+  {
+    background-color: black;
+    opacity: 1;
+  }
+  100%{
+    background-color: transparent;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+#welcome h1
+{
+  font-family: 'Unica One', sans-serif;
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+header
+{
+  position: fixed;
+  width: 100%;
+  background-color: #111;
+  color: #C5B358;
+  padding: 1rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px -2px 10px #C5B358;
+  font-family: 'Oswald', sans-serif;
+  z-index: 1;
+}
+
+header #menu
+{
+  display: none;
+  margin-right: 10em;
+}
+
+header div
+{
+  display: flex;
+  align-items: center;
+}
+
+header div h1
+{
+  margin: 0;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+#header-img
+{
+  max-height: 3rem;
+  max-width: 5em;
+  
+}
+
+nav
+{
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 10em;
+  width: 400px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(90deg, rgba(255, 255, 255, 0), #eee, rgba(255, 255, 255, 0)) 50;
+}
+
+nav button
+{
+  margin: 0;
+  padding: 0.25em 0;
+  background-color: rgba(255,255,255,0);
+  border: 0;
+  width: 100%;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.25em;
+}
+
+nav button a
+{
+  color: #eee;
+  text-decoration: none;
+}
+
+
+header #options
+  {
+    visibility: hidden;
+    position: fixed;
+    top: 85px;
+    right: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #111;
+    line-height: 2rem;
+    padding: 1rem;
+  }
+  
+  header #options a
+  {
+    border: 0;
+    color: #eee;
+    text-decoration: none;
+  }
+
+@media screen and (max-width: 720px)
+{
+  nav
+  {
+    display: none;
+  }
+  
+  header #menu
+  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    color: #eee;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+}
+
+main
+{
+  font-family: Oswald, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.first h1{
+     color: #C5B358;
+     text-shadow: 1px 1px 5px #E8E8E8;
+}
+.first
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-image:  linear-gradient( transparent, 40%, black),url("https://wallpapercave.com/wp/wp5643491.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 100%;
+  padding-top: 20rem;
+  margin-top: 5rem;
+}
+
+
+.first div
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 50rem;
+  margin: 0 1rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid;
+}
+
+p
+{
+  font-size: 1.25rem;
+  font-family: Roboto, sans-serif;
+}
+
+h1
+{
+  font-size: 4em;
+}
+
+.first iframe
+{
+  margin-top: 5rem;
+  width: 100%;
+  height: 400px
+}
+.second
+{
+  color: white;
+  background-color: black;
+  margin: 0 1rem;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 50rem;
+  border-bottom: 1px solid;
+}
+
+.controller
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 0fr;
+  column-gap: 1rem;
+  background-color: #558B2F;
+  align-items: center;
+  margin: 1.5em 0;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.controller img
+{
+  width: 100%;
+  height: auto;
+  margin-right: 8em;
+}
+
+.controller .desc
+{
+  border-left: 1px solid white;
+  padding-left: 1em;
+  grid-column: 2/3;
+  grid-row: 1/3;
+}
+
+.controller button
+{
+  width: 100%;
+  font-size: 1.2rem;
+  margin-top: 1em;
+  padding: 0.5rem 0;
+  color: white;
+  border: 0;
+  cursor: pointer;
+}
+
+.controller h2
+{
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+#ar
+{
+  background-color: #383838;
+}
+
+#ar button
+{
+  background-color: #A8A8A8;
+}
+
+#br
+{
+  background-color: #606060;
+}
+
+#br button
+{
+  background-color: #A9A9A9;
+}
+
+#sh
+{
+  background-color: #808080;
+}
+
+#sh button
+{
+  background-color: #B0B0B0;
+}
+
+.third
+{
+  display: flex;
+  flex-direction: column;
+  height: 40rem;
+  background: linear-gradient(black, transparent), url("https://www.maclife.de/media/maclife/styles/tec_frontend_fullscreen/public/images/editors/2019_41/image-115019--4572433.jpg?itok=I1gerMP7");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  color: white;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.third div
+{
+  max-width: 50rem;
+  margin: 0 1rem;
+}
+
+#email
+{
+  margin-top: 3rem;
+  height: 2rem;
+  width: 13rem;
+  border: 0;
+  padding: 0 1rem;
+}
+
+#submit
+{
+  border: 0;
+  background-color: #696969;
+  color: white;
+  height: 2rem;
+  width: 15rem;
+  padding: 0 1rem;
+  margin-top: 1rem;
+}
+.services{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.services-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0,0,0,0.1);
+    min-width: 230px;
+    padding: 15px;
+    margin: 15px;
+    flex-grow: 0.7;
+    background-color: white;
+}
+.services-box i{
+    color: black;
+    font-size: 2rem;
+    margin: 2px;
+    display: flex;
+}
+.services-box h1{
+    color: #696969;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+}
+.services-box p{
+    color: #878787;
+    margin: 0px;
+    font-size: 0.9rem;
+}
+
+footer
+{
+  color: rgb(165, 165, 165);
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.8);
+  width: 80%;
+  max-width: 50rem;
+  margin: 0 10rem;
+  align-self: center;
+  padding: 1rem;
+  text-align: right;
+}
+
+footer div
+{
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer p
+{
+  font-size: 0.8rem;
+}
+
+footer img
+{
+  width: 3rem;
+}
+
+footer a
+{
+  color: rgb(165, 165, 165);
+}
+
+@media screen and (min-width: 1200px)
+{
+  .first
+  {
+    background-size: 100%;
+  }
+  
+  .third
+  {
+    background-size: 100%;
+  }
+}
+
+@media screen and (max-width: 650px)
+{
+  .controller
+  {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .controller img
+  {
+    padding: 5rem 0;
+    margin-right: 0;
+    width: 90%;
+  }
+  
+  .controller .desc
+  {
+    border-left: none;
+  }
+  
+  .controller .details
+  {
+    display: none;
+  }
+}
